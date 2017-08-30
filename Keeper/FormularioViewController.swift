@@ -27,6 +27,7 @@ class FormularioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+        
     
     @IBAction func salvar(_ sender: AnyObject) {
         let titulo = self.etTitulo.text
@@ -38,7 +39,7 @@ class FormularioViewController: UIViewController {
         
         self.cadastro.add(nova: nota)
         
-        self.navigationController?.popViewController(animated: true)
+        //self.navigationController?.popViewController(animated: true)
     }
 
     /*
