@@ -11,9 +11,23 @@ import UIKit
 class SobreViewController: UIViewController {
     var nota: Nota!
     
+    @IBOutlet weak var lbTitulo: UILabel!
+    @IBOutlet weak var lbData: UILabel!
+    @IBOutlet weak var tfTexto: UITextView!
+    @IBOutlet weak var lbPrioridade: UILabel!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print("CHEGOU A NOTA: \(self.nota.titulo!)")
+        self.lbTitulo.text = self.nota.titulo
+        self.lbData.text = self.nota.data
+        self.tfTexto.text = self.nota.texto
+        if (self.nota.prioridade == 1) {
+             self.lbPrioridade.text = "ALTA"
+        } else {
+            self.lbPrioridade.text = "BAIXA"
+        }
+       
         // Do any additional setup after loading the view.
     }
 
