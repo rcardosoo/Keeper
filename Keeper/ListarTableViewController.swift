@@ -59,7 +59,7 @@ class ListarTableViewController: UITableViewController {
             print("CADASTRO FOI PASSADO \(self.cadastro.size())")
         } else if (segue.identifier == "celula_sobre") {
             print("CHEGOU NO PREPARE DA SEGUE DETALHES = ")
-        
+            //
         }
     }
     

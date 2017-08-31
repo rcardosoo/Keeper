@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Navigation items with more than one left or right bar item" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -127,17 +128,23 @@
                                     <outlet property="lbData" destination="Lij-OF-AUN" id="9co-xF-A2P"/>
                                     <outlet property="lbNome" destination="tUv-kZ-nqh" id="6Hp-vA-47a"/>
                                     <outlet property="lbPrioridade" destination="GwF-yR-YOm" id="704-cz-AHw"/>
-                                    <segue destination="5WM-45-W0J" kind="show" identifier="celula_sobre" id="Kdo-IK-cbO"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
                     </tableView>
                     <navigationItem key="navigationItem" title="Keeper" id="cLG-sM-94J">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="c9K-TE-E6f">
-                            <connections>
-                                <segue destination="FVl-Qg-ovD" kind="show" identifier="listar_formulario" id="2Z9-t5-LJU"/>
-                            </connections>
-                        </barButtonItem>
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="add" id="c9K-TE-E6f">
+                                <connections>
+                                    <segue destination="FVl-Qg-ovD" kind="show" identifier="listar_formulario" id="2Z9-t5-LJU"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="play" id="RO3-RP-QaU">
+                                <connections>
+                                    <segue destination="5WM-45-W0J" kind="show" identifier="cell_sobre" id="fQ4-1c-zNI"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jvb-9D-czm" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -157,24 +164,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="MV3-b7-a4X">
-                                <frame key="frameInset" minX="16" minY="139" width="288" height="261"/>
+                                <frame key="frameInset" minX="16" minY="171" width="288" height="229"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x5l-AH-P7z">
-                                <frame key="frameInset" minX="16" minY="67" width="288" height="52"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kib-ST-gex">
+                                <frame key="frameInset" minX="16" minY="99" width="288" height="48"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="28"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xWJ-dB-a4V">
+                                <frame key="frameInset" minX="98" minY="171" width="125" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.19058701665060351" green="0.18569115197947303" blue="0.20474759615384619" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Sqc-z0-fgC">
+                                <frame key="frameInset" minX="23" minY="429" width="281" height="29"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Title" id="XDa-k9-szX"/>
+                    <navigationItem key="navigationItem" title="Detalhes" id="XDa-k9-szX"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="MPl-ow-4I4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
