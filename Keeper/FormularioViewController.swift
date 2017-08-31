@@ -20,6 +20,8 @@ class FormularioViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.save, target: self, action: #selector(salvar))
     }
 
     override func didReceiveMemoryWarning() {
@@ -27,19 +29,38 @@ class FormularioViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-        
+    
     
     @IBAction func salvar(_ sender: AnyObject) {
         let titulo = self.etTitulo.text
         let texto = self.tfTexto.text
         let prioridade = self.swPrioridade.isOn
         
+        var prio:  Int
         
-        let nota = Nota(titulo: titulo!, texto: texto!, prioridade: prioridade)
         
+        if (prioridade == true){
+            prio = 1
+        }else{
+            prio = 0
+        }
+        
+        let data = Date()
+        let formatter = DateFormatter()
+        formatter.dateFormat = "dd.MM.yyyy"
+        let result = formatter.string(from: data)
+        
+        let nota = Nota(titulo: titulo!, texto: (texto)!, prioridade: prio, result: result)
+        
+        print("\(nota)")
+        
+        if (self.cadastro == nil) {
+            print("CADAStro eh nil")
+        }
         self.cadastro.add(nova: nota)
         
-        //self.navigationController?.popViewController(animated: true)
+        
+        self.navigationController?.popViewController(animated: true)
     }
 
     /*

@@ -28,7 +28,7 @@ class ListarTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        return self.cadastro.size()
     }
     
 
@@ -45,10 +45,12 @@ class ListarTableViewController: UITableViewController {
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        print("CHEGOU NO PREPARE")
         if (segue.identifier == "listar_formulario"){
-            let fnc = segue.destination as! FormularioViewController
-            fnc.cadastro = self.cadastro
+            print("ENTROU NO IF DA SEGUE")
+            let fvc = segue.destination as! FormularioViewController
+            fvc.cadastro = self.cadastro
+            print("CADASTRO FOI PASSADO \(self.cadastro.size())")
         }
     }
     

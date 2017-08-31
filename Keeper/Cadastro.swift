@@ -32,6 +32,7 @@ class Cadastro: NSObject{
     }
     
     func add(nova: Nota) {
+        print("Chegou a nota? \(nova.titulo)")
         self.lista.append(nova)
         self.salvar()
     }
@@ -55,5 +56,6 @@ class Cadastro: NSObject{
         self.lista[origem] = self.lista[destino]
         self.lista[destino] = aux
         self.salvar()
-    }
+    }    
+    
 }

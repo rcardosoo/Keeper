@@ -12,7 +12,6 @@ class NotaTableViewCell: UITableViewCell {
 
     @IBOutlet weak var lbTitulo: UILabel!
     @IBOutlet weak var lbPrioridade: UILabel!
-    
         
     override func awakeFromNib() {
         super.awakeFromNib()

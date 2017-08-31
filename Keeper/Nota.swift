@@ -11,28 +11,28 @@ import Foundation
 class Nota: NSObject, NSCoding {
     var titulo: String!
     var texto: String!
-    var prioridade: Bool!
+    var prioridade: Int!
     var data: String!
     
     override var description: String{
-        return "\(self.titulo!) -  \(self.prioridade!)"
+        var txtCell: String
+        txtCell = "\(self.titulo!)"
+        
+        return txtCell
+
     }
     
-    init(titulo: String, texto: String, prioridade: Bool) {
+    init(titulo: String, texto: String, prioridade: Int, result: String) {
         self.titulo = titulo
         self.texto = texto
         self.prioridade = prioridade
-        let data = Date()
-        let formatter = DateFormatter()
-        formatter.dateFormat = "dd.MM.yyyy"
-        let result = formatter.string(from: data)
         self.data = result
     }
     
     required init?(coder aDecoder: NSCoder) {
         self.titulo = aDecoder.decodeObject(forKey: "titulo") as! String
         self.texto = aDecoder.decodeObject(forKey: "texto") as! String
-        self.prioridade = aDecoder.decodeObject(forKey: "prioridade") as! Bool
+        self.prioridade = aDecoder.decodeObject(forKey: "prioridade") as! Int
         self.data = aDecoder.decodeObject(forKey: "data") as! String
     }
     
