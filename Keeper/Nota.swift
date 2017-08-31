@@ -16,7 +16,11 @@ class Nota: NSObject, NSCoding {
     
     override var description: String{
         var txtCell: String
-        txtCell = "\(self.titulo!)"
+        if (prioridade == 1) {
+            txtCell = "\(self.titulo!) - A"
+        } else {
+            txtCell = "\(self.titulo!) - B"
+        }
         
         return txtCell
 

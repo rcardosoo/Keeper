@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		840E22661F589B1F00A8C3CC /* NotaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 840E22651F589B1F00A8C3CC /* NotaTableViewCell.swift */; };
+		840E22691F58A7F500A8C3CC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 840E22671F58A7F500A8C3CC /* Main.storyboard */; };
 		8491A7301F5739AD008CFFCE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8491A72F1F5739AD008CFFCE /* AppDelegate.swift */; };
-		8491A7351F5739AD008CFFCE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8491A7331F5739AD008CFFCE /* Main.storyboard */; };
 		8491A7381F5739AD008CFFCE /* Keeper.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8491A7361F5739AD008CFFCE /* Keeper.xcdatamodeld */; };
 		8491A73A1F5739AD008CFFCE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8491A7391F5739AD008CFFCE /* Assets.xcassets */; };
 		8491A73D1F5739AD008CFFCE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8491A73B1F5739AD008CFFCE /* LaunchScreen.storyboard */; };
@@ -20,9 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		840E22651F589B1F00A8C3CC /* NotaTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotaTableViewCell.swift; sourceTree = "<group>"; };
+		840E22681F58A7F500A8C3CC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8491A72C1F5739AD008CFFCE /* Keeper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Keeper.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8491A72F1F5739AD008CFFCE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8491A7341F5739AD008CFFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8491A7371F5739AD008CFFCE /* Keeper.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Keeper.xcdatamodel; sourceTree = "<group>"; };
 		8491A7391F5739AD008CFFCE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8491A73C1F5739AD008CFFCE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -66,14 +68,15 @@
 			children = (
 				8491A74A1F573B99008CFFCE /* model */,
 				8491A72F1F5739AD008CFFCE /* AppDelegate.swift */,
-				8491A7331F5739AD008CFFCE /* Main.storyboard */,
 				8491A7391F5739AD008CFFCE /* Assets.xcassets */,
+				840E22671F58A7F500A8C3CC /* Main.storyboard */,
 				8491A73B1F5739AD008CFFCE /* LaunchScreen.storyboard */,
 				8491A73E1F5739AD008CFFCE /* Info.plist */,
 				8491A7361F5739AD008CFFCE /* Keeper.xcdatamodeld */,
 				8491A7441F573A92008CFFCE /* ListarTableViewController.swift */,
 				8491A7461F573AED008CFFCE /* FormularioViewController.swift */,
 				8491A7481F573B19008CFFCE /* SobreViewController.swift */,
+				840E22651F589B1F00A8C3CC /* NotaTableViewCell.swift */,
 			);
 			path = Keeper;
 			sourceTree = "<group>";
@@ -146,9 +149,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				840E22691F58A7F500A8C3CC /* Main.storyboard in Resources */,
 				8491A73D1F5739AD008CFFCE /* LaunchScreen.storyboard in Resources */,
 				8491A73A1F5739AD008CFFCE /* Assets.xcassets in Resources */,
-				8491A7351F5739AD008CFFCE /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,16 +169,17 @@
 				8491A7451F573A92008CFFCE /* ListarTableViewController.swift in Sources */,
 				8491A7381F5739AD008CFFCE /* Keeper.xcdatamodeld in Sources */,
 				8491A7301F5739AD008CFFCE /* AppDelegate.swift in Sources */,
+				840E22661F589B1F00A8C3CC /* NotaTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		8491A7331F5739AD008CFFCE /* Main.storyboard */ = {
+		840E22671F58A7F500A8C3CC /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				8491A7341F5739AD008CFFCE /* Base */,
+				840E22681F58A7F500A8C3CC /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";

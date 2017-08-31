@@ -33,14 +33,20 @@ class ListarTableViewController: UITableViewController {
     
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! NotaTableViewCell
         
-        let nota = self.cadastro.get(index: indexPath.row)
+        let p = self.cadastro.lista[indexPath.row]
         
-        cell.textLabel?.text = nota.description
+        cell.lbNome.text = "\(p.titulo!)"
+        cell.lbData.text = "\(p.data!)"
+        cell.lbPrioridade.text = ""
+        if (p.prioridade == 1) {
+            cell.lbPrioridade.backgroundColor = UIColor.red
+        } else {
+            cell.lbPrioridade.backgroundColor = UIColor.gray
+        }
         
         return cell
-
     }
     
     // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -51,6 +57,9 @@ class ListarTableViewController: UITableViewController {
             let fvc = segue.destination as! FormularioViewController
             fvc.cadastro = self.cadastro
             print("CADASTRO FOI PASSADO \(self.cadastro.size())")
+        } else if (segue.identifier == "celula_sobre") {
+            print("CHEGOU NO PREPARE DA SEGUE DETALHES = ")
+        
         }
     }
     
@@ -59,7 +68,7 @@ class ListarTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
-  
+    
 
     /*
     // Override to support conditional editing of the table view.
