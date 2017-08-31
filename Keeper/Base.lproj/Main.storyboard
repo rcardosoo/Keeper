@@ -139,9 +139,9 @@
                                     <segue destination="FVl-Qg-ovD" kind="show" identifier="listar_formulario" id="2Z9-t5-LJU"/>
                                 </connections>
                             </barButtonItem>
-                            <barButtonItem systemItem="play" id="RO3-RP-QaU">
+                            <barButtonItem systemItem="play" id="6WP-RI-Dre">
                                 <connections>
-                                    <segue destination="5WM-45-W0J" kind="show" identifier="cell_sobre" id="fQ4-1c-zNI"/>
+                                    <segue destination="5WM-45-W0J" kind="show" identifier="celula_sobre" id="VVm-41-RMc"/>
                                 </connections>
                             </barButtonItem>
                         </rightBarButtonItems>

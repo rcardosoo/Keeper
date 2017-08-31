@@ -13,7 +13,7 @@ class SobreViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        print("CHEGOU A NOTA: \(self.nota.titulo!)")
         // Do any additional setup after loading the view.
     }
 

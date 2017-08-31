@@ -10,6 +10,7 @@ import UIKit
 
 class ListarTableViewController: UITableViewController {
     var cadastro = Cadastro()
+    var notaSelecionada: Nota!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,9 +35,10 @@ class ListarTableViewController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "celula", for: indexPath) as! NotaTableViewCell
+        print("ENTROU NO METODO DE CONFIGURACAO DA CELULA")
         
         let p = self.cadastro.lista[indexPath.row]
-        
+        //self.notaSelecionada = p
         cell.lbNome.text = "\(p.titulo!)"
         cell.lbData.text = "\(p.data!)"
         cell.lbPrioridade.text = ""
@@ -58,8 +60,10 @@ class ListarTableViewController: UITableViewController {
             fvc.cadastro = self.cadastro
             print("CADASTRO FOI PASSADO \(self.cadastro.size())")
         } else if (segue.identifier == "celula_sobre") {
-            print("CHEGOU NO PREPARE DA SEGUE DETALHES = ")
-            //
+            print("ENTROU NO PREPARE CELULA-SOBRE")
+            print("SELECIONADA = \(self.notaSelecionada.titulo!)")
+            let svc = segue.destination as! SobreViewController
+            svc.nota = self.notaSelecionada!
         }
     }
     
@@ -68,7 +72,10 @@ class ListarTableViewController: UITableViewController {
         self.tableView.reloadData()
     }
 
-    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("You selected cell number: \(indexPath.row)!");
+        self.notaSelecionada = self.cadastro.lista[indexPath.row]
+    }
 
     /*
     // Override to support conditional editing of the table view.
