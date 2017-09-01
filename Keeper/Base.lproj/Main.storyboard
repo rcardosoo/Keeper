@@ -59,12 +59,21 @@
                                 <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardAppearance="light"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gLt-Cu-RfP">
-                                <frame key="frameInset" minX="16" minY="473" width="286" height="47"/>
+                                <frame key="frameInset" minX="16" minY="455" width="286" height="47"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.82964743589743595" green="0.82964743589743595" blue="0.82964743589743595" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Salvar"/>
                                 <connections>
                                     <action selector="salvar:" destination="FVl-Qg-ovD" eventType="touchUpInside" id="Pr6-NG-qGK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCN-hW-A3H">
+                                <frame key="frameInset" minX="18" minY="514" width="287" height="43"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Enviar"/>
+                                <connections>
+                                    <action selector="btEnviar:" destination="FVl-Qg-ovD" eventType="touchUpInside" id="9VG-rZ-VND"/>
                                 </connections>
                             </button>
                         </subviews>

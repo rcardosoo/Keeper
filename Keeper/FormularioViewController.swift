@@ -14,6 +14,25 @@ class FormularioViewController: UIViewController {
     @IBOutlet weak var tfTexto: UITextView!
     @IBOutlet weak var swPrioridade: UISwitch!
     
+    @IBAction func btEnviar(_ sender: AnyObject) {
+        // texto para compartilhamento
+        let text = self.tfTexto.text!
+        //let text2 = "Lorem ispnum ytea fhilomun dotuns."
+        //print("\(text)")
+        
+        // Configurar controlador de exibição de atividade
+        //let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        //activityViewController.popoverPresentationController?.sourceView = self.view // so that iPads won't crash
+        
+        let activityViewController = UIActivityViewController(activityItems: [text], applicationActivities: nil)
+        navigationController?.present(activityViewController, animated: true) {
+            // ...
+        }
+        
+        // excluindo alguns app
+        activityViewController.excludedActivityTypes = [ UIActivityType.airDrop, UIActivityType.postToFacebook ]
+        
+    }
     var cadastro: Cadastro!
     
     override func viewDidLoad() {
@@ -52,7 +71,7 @@ class FormularioViewController: UIViewController {
         
         let nota = Nota(titulo: titulo!, texto: (texto)!, prioridade: prio, result: result)
         
-        print("\(nota)")
+        //print("\(nota)")
         
         if (self.cadastro == nil) {
             print("CADAStro eh nil")
